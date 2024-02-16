@@ -1,5 +1,6 @@
 
 #SIMPLE WORD GUESSER GAME WIRTTEN IN PYTHON
+#REQIRES "words.txt" to function
 import random
 
 with open("words.txt", "r") as file:
