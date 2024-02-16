@@ -1,13 +1,11 @@
+
 #SIMPLE WORD GUESSER GAME WIRTTEN IN PYTHON
 import random
 
-word_list = ["PROGRAMMING", "SOFTWARE", "HARDWARE", "DATABASE", "ALGORITHM", 
-"NETWORK", "CYBERSECURITY", "PYTHON", "JAVASCRIPT", "LINUX",
-"OPERATING", "PERIPHERAL", "INTERFACE", "VIRTUALIZATION", "DEBUGGING",
- "COMPILER", "FIRMWARE", "CRYPTOGRAPHY", "CACHE", "FLOPPY","HACKATHON", "RANSOMWARE", "BIOMETRICS", 
- "FIBEROPTIC", "TELECOMM", "CRYPTOCURRENCY", "SUPERCOMPUTER", "INTERNET", "MALWARE"]
+with open("words.txt", "r") as file:
+    words = file.read().splitlines()
 
-word = random.choice(word_list)
+word = random.choice(words)
 
 fullWord = list(word)
 missingWord = list(word)
@@ -20,6 +18,7 @@ print("-"*20)
 print(" ".join(missingWord))
 
 for m in range(chances):
+    # system('cls')
     choice =   input("> ")
     for i in range(len(fullWord)):
             if fullWord[i] == choice.upper():
@@ -34,7 +33,6 @@ for m in range(chances):
 if "_" in missingWord:
     print("YOU LOOSE")
 print(f"Word: {word}")
-
 
 
 
