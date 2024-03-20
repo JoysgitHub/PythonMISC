@@ -1,5 +1,3 @@
-from ntpath import splitext
-from re import T
 import subprocess
 import os
 
